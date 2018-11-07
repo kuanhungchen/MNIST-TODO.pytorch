@@ -16,8 +16,11 @@ def _train(path_to_data_dir: str, path_to_checkpoints_dir: str):
     dataset = Dataset(path_to_data_dir, mode=Dataset.Mode.TRAIN)
     dataloader = DataLoader(dataset, batch_size=64, shuffle=True)
 
-    model = Model().cuda()
-    optimizer = torch.optim.SGD(model.parameters(), lr=1e-3, momentum=0.9, weight_decay=0.0005)
+    # TODO: CODE START
+    raise NotImplementedError
+    # model = XXX
+    # optimizer = XXX
+    # TODO: CODE END
 
     num_steps_to_display = 20
     num_steps_to_snapshot = 1000
@@ -35,8 +38,11 @@ def _train(path_to_data_dir: str, path_to_checkpoints_dir: str):
             images = images.cuda()
             labels = labels.cuda()
 
-            logits = model.train().forward(images)
-            loss = model.loss(logits, labels)
+            # TODO: CODE START
+            raise NotImplementedError
+            # logits = XXX
+            # loss = XXX
+            # TODO: CODE END
 
             optimizer.zero_grad()
             loss.backward()

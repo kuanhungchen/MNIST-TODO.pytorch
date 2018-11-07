@@ -10,32 +10,19 @@ class Model(nn.Module):
 
     def __init__(self):
         super().__init__()
-
-        self._features = nn.Sequential(
-            nn.Conv2d(1, 32, 5),
-            nn.ReLU(),
-            nn.MaxPool2d(2),
-            nn.Conv2d(32, 64, 5),
-            nn.ReLU(),
-            nn.MaxPool2d(2),
-        )
-
-        self._classifier = nn.Sequential(
-            nn.Linear(64 * 4 * 4, 1024),
-            nn.ReLU(),
-            nn.Dropout(),
-            nn.Linear(1024, 10)
-        )
+        # TODO: CODE START
+        raise NotImplementedError
+        # TODO: CODE END
 
     def forward(self, images: Tensor) -> Tensor:
-        features = self._features(images)
-        features = features.view(features.shape[0], -1)
-        logits = self._classifier(features)
-        return logits
+        # TODO: CODE START
+        raise NotImplementedError
+        # TODO: CODE END
 
     def loss(self, logits: Tensor, labels: Tensor) -> Tensor:
-        cross_entropy = torch.nn.functional.cross_entropy(logits, labels)
-        return cross_entropy
+        # TODO: CODE START
+        raise NotImplementedError
+        # TODO: CODE END
 
     def save(self, path_to_checkpoints_dir: str, step: int) -> str:
         path_to_checkpoint = os.path.join(path_to_checkpoints_dir,
