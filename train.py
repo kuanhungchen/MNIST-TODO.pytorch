@@ -20,7 +20,7 @@ def _train(path_to_data_dir: str, path_to_checkpoints_dir: str):
     # TODO: CODE START
     # raise NotImplementedError
     model = Model()
-    model.load('checkpoints/model-201811091709-100000.pth')
+    # model.load('checkpoints/model-201811091709-100000.pth')
     if Config.Device == 'gpu':
         model = model.cuda()
 
