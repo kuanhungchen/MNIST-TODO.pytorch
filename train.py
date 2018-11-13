@@ -67,18 +67,10 @@ def _train(path_to_data_dir: str, path_to_checkpoints_dir: str):
                 path_to_checkpoint = model.save(path_to_checkpoints_dir, step)
                 print(f'Model saved to {path_to_checkpoint}')
 
-            #if step == 40000:
-            #    optimizer = optim.Adam(model.parameters(), lr=Config.Learning_Rate/2)
-            #    print(f'Learning rate changed to {Config.Learning_Rate/2}')
-
-            #if step == 80000:
-            #    optimizer = optim.Adam(model.parameters(), lr=Config.Learning_Rate/4)
-            #    print(f'Learning rate changed to {Config.Learning_Rate/4}')
-
-            # if step % Config.EveryStepsToDecay == 0:
-            #     _new_learning_rate = Config.Learning_Rate / (1 + step/Config.EveryStepsToDecay)
-            #     optimizer = optim.Adam(model.parameters(), lr=_new_learning_rate)
-            #     print(f'Learning rate changed to {_new_learning_rate}')
+            if step % Config.EveryStepsToDecay == 0:
+                _new_learning_rate = Config.Learning_Rate / (10 * step/Config.EveryStepsToDecay)
+                optimizer = optim.Adam(model.parameters(), lr=_new_learning_rate)
+                print(f'Learning rate changed to {_new_learning_rate}')
 
             if step == Config.EveryStepsToFinish:
                 should_stop = True
