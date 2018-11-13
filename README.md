@@ -1,4 +1,4 @@
-_Homework from repository of potterhsu_
+__(HOMEWORK)__
 # MNIST-TODO.pytorch
 
 
