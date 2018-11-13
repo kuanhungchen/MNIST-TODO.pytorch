@@ -1,0 +1,5 @@
+./checkpoints/model-201811091709-100000.pth: Acc=0.9946
+./checkpoints/model-201811120605-200000.pth: Acc=0.9938
+./checkpoints/model-201811121015-110000.pth: Acc=0.9945
+./checkpoints/model-201811121019-120000.pth: Acc=0.9945
+./checkpoints/model-201811121022-130000.pth: Acc=0.9945
