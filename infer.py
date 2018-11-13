@@ -35,6 +35,8 @@ if __name__ == '__main__':
 
         path_to_image = args.image
         path_to_checkpoint = args.checkpoint
+        # path_to_image = 'images/7.jpg'
+        # path_to_checkpoint = 'checkpoints/model-201811091547-10000.pth'
 
         _infer(path_to_image, path_to_checkpoint)
 
