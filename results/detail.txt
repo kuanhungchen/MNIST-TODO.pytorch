@@ -1,1 +1,0 @@
-./checkpoints/model-201811091709-100000.pth: Acc=0.9946
